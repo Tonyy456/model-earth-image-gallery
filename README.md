@@ -3,12 +3,9 @@ author: Anthony D'Alesandro
   
 model-earth-image-gallery is a react built application that makes a request to a specific github repo and renders all the images stored at that repository.
 
-# Warning
-I cant say for sure that the github token wont be exposed and easily caught by an attacker. proceed with caution.
-
 # Config / Setup
-### .env file
-./image-gallery/.env
+### ./image-gallery/.env file
+this file is expected to have the access token needed to access any private repository or complete any action that requires authentication. May be omitted in some cases.
 ```env
 REACT_APP_GITHUB_ACCESS_TOKEN=""
 ```
@@ -44,7 +41,7 @@ npm run start
 ```
 
 # Build for development
-***NOT TESTED***
+has a known issue! octokit may or maynot fail to build.
 ```sh
 npm run build
 ```

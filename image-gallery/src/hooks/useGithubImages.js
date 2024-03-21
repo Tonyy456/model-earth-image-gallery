@@ -1,5 +1,5 @@
 import {useState, useEffect} from 'react'
-import { Octokit } from '@octokit/rest';
+import { Octokit } from 'octokit';
 import imageLocations from '../image-locations.json'
 
 /*
