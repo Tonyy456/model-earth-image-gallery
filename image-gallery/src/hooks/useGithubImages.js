@@ -1,5 +1,5 @@
-import React, {useState, useEffect} from 'react'
-import { Octokit } from "octokit";
+import {useState, useEffect} from 'react'
+import { Octokit } from '@octokit/rest';
 import imageLocations from '../image-locations.json'
 
 /*
@@ -9,11 +9,11 @@ hook with the sole purposes of extracting data out of use given image-locations.
 */
 function useGithubImages() {
     const [images, setImages] = useState([]);
-    const octokit = new Octokit({
-      auth: process.env.REACT_APP_GITHUB_ACCESS_TOKEN
-     });
     useEffect(() => {
         async function onLoad() {
+            const octokit = new Octokit({
+                auth: process.env.REACT_APP_GITHUB_ACCESS_TOKEN
+            });
             for(let i = 0; i < imageLocations.locations.length; i++) {
                 const location = imageLocations.locations[i];
                 const response = await octokit.request('GET /repos/{owner}/{repo}/contents/{path}', {

@@ -1,5 +1,5 @@
-import React, {useState, useEffect} from 'react'
-import useGithubImages from '../hooks/useGithubImages';
+import React, {useState} from 'react'
+import useGithubImages from './hooks/useGithubImages';
 import ImageViewer from './components/ImagePageContainer';
 
 /* 
@@ -17,7 +17,7 @@ function App() {
   // ImageViewer conditionally shows the children element if the element passed is null
   return (
     <ImageViewer 
-      element={selectedImage == -1 ? null : githubImages[selectedImage]} 
+      element={selectedImage === -1 ? null : githubImages[selectedImage]} 
       onUpdate={(change) => setSelectedImage(prev => prev + change)}
       onExit={() => setSelectedImage(-1)}
     >

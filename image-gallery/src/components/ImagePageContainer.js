@@ -16,16 +16,13 @@ TODO:
 function ImageViewer(props) {
   const { children, ...restProps } = props;
 
-  // if element passed, make that the whole page, else show the current page.
-  let element;
-  if (props.element == null)
-    element = <SelectedImageContainer {...restProps} />
-  else 
-    element = children
+  const imageElement = props.element ? <SelectedImageContainer {...restProps} /> : props.children;
 
   return (
-    {element}
-  )
+    <div>
+      {imageElement}
+    </div>
+  );
 }
  /*
   author: Anthony D'Alesandro
@@ -46,7 +43,7 @@ function BurgerMenu(props) {
 
   return (
     <div className='burger-menu'>
-      <a href={imageElement.html_url} target="_blank">
+      <a href={imageElement.html_url} target="_blank" rel="noreferrer">
         <h3> Image </h3>
       </a>
       <p>name: {imageElement.name}</p>
