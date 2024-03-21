@@ -18,7 +18,7 @@ function App() {
   return (
     <ImageViewer 
       element={selectedImage === -1 ? null : githubImages[selectedImage]} 
-      onUpdate={(change) => setSelectedImage(prev => prev + change)}
+      onUpdate={(change) => {console.log(change); setSelectedImage(prev => (prev + githubImages.length + change) % githubImages.length)}}
       onExit={() => setSelectedImage(-1)}
     >
       <Gallery elements={githubImages} onImageSelect={handleImageClick} />
