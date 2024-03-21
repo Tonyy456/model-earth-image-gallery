@@ -78,7 +78,7 @@ img {
     height: 100px;
     border-radius: 2px;
     background-color: rgba(255,255,255,0.3);
-    background-image: url('../public/arrow-right.svg');
+    background-image: url('/public/arrow-right.svg');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -92,7 +92,7 @@ img {
     height: 100px;
     border-radius: 2px;
     background-color: rgba(255,255,255,0.3);
-    background-image: url('../public/arrow-left.svg');
+    background-image: url('/public/arrow-left.svg');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -107,7 +107,7 @@ img {
     height: 50px;
     border-radius: 5px;
     background-color: rgba(255,255,255,0.3);
-    background-image: url('../public/burger-menu.svg');
+    background-image: url('/public/burger-menu.svg');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
