@@ -13,7 +13,7 @@ function App() {
   const handleImageClick = (e,v) => {
     setSelectedImage(e.target.id)
   }
-
+  if (!githubImages || !githubImages.length) return <></>
   // ImageViewer conditionally shows the children element if the element passed is null
   return (
     <ImageViewer 
@@ -22,6 +22,7 @@ function App() {
       onExit={() => setSelectedImage(-1)}
     >
       <Gallery elements={githubImages} onImageSelect={handleImageClick} />
+      
     </ImageViewer>
   )
 }
@@ -34,10 +35,20 @@ Gallery displays images in a flex format on a page. 250px wide each. Allows an o
 function Gallery(props) {
   const {elements, onImageSelect} = props;
   return (<>
+    <div className='navbar'>
+      <a href='/'>
+        <img 
+          className='me-logo'
+          src='https://model.earth/localsite/img/logo/earth/model-earth.png'/>
+      </a>
+    </div>
     <h1>Image Gallery</h1>
     <div className='image-container'>
-      {elements.map((item, index) => {return (
-        <img key={index} id={index} src={item.download_url} alt={item} onClick={onImageSelect}/>
+      {elements.map((item, index) => {
+        console.log(item);
+        if(!item.download_url) return <></>
+        return (
+        <img key={index} id={index} src={item.download_url} alt={''} onClick={onImageSelect}/>
         )})}
     </div>
   </>)

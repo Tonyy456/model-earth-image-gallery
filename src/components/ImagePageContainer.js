@@ -17,7 +17,6 @@ function ImageViewer(props) {
   const { children, ...restProps } = props;
 
   const imageElement = props.element ? <SelectedImageContainer {...restProps} /> : props.children;
-
   return (
     <div>
       {imageElement}
@@ -70,7 +69,12 @@ function SelectedImageContainer(props) {
   const [burgerOpen, setBurgerOpen] = useState(false);
   return(
     <div className='selected-image-container'>
-      <img src={element.download_url} alt=''/>
+      <div className='selected-image-container-spacer'>
+        <img src={element.download_url} alt=''/>
+      </div>
+      <img 
+      className='model-earth-logo'
+      src='https://model.earth/localsite/img/logo/earth/model-earth.png'/>
       <button className='exit-button button-hover ' onClick={onExit}/>
       <button className='next-button button-hover ' onClick={() => onUpdate(1)}/>
       <button className='previous-button button-hover ' onClick={() => onUpdate(-1)}/>
