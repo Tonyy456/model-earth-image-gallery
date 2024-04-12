@@ -51,7 +51,8 @@ img {
     transform: scale(1.05);
 }
 
-.selected-image-container {
+/* Caused popup image to be hidden when placed in surround localsite.js div */
+.selected-image-containerX {
     position: absolute;
     top: 0;
     left: 0;
