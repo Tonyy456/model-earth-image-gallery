@@ -2,6 +2,8 @@
   
 A React application that pulls image URLs from a specified github repo and renders all the images in a [gallery](view).
 
+[model.earth/react-gallery](https://model.earth/react-gallery/view)
+
 ## Add your Github Repo
 
 ### Configure github image folder endpoint file
@@ -57,4 +59,5 @@ npm run build
 ```
 <br>
 ---
+
 Developer: [Anthony D'Alesandro](https://github.com/Tonyy456)
