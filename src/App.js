@@ -42,7 +42,6 @@ function Gallery(props) {
           src='https://model.earth/localsite/img/logo/earth/model-earth.png'/>
       </a>
     </div>
-    <h1>Image Gallery</h1>
     <div className='image-container'>
       {elements.map((item, index) => {
         console.log(item);
