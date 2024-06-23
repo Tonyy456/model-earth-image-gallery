@@ -15,12 +15,12 @@ In src/image-locations.json change to your repo(s)
     "locations": [
         {
             "owner": "ModelEarth",
-            "repo": "replicate",
+            "repo": "requests",
             "folderPath": "/images"
         },
         {
             "owner": "Tonyy456",
-            "repo": "replicate",
+            "repo": "requests",
             "folderPath": "/images"
         }
     ]
